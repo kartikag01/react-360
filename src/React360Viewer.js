@@ -75,8 +75,9 @@ class React360Viewer extends Component {
 
     fetchData() {
         for (let i = 0; i < this.props.thumbnails.length; i++) {
-            const filePath = getRelativeImagePath(`${this.props.imagePath}${this.props.thumbnails[i]}`);
-            this.imageData.push(filePath);
+            const thumbnail = this.props.thumbnails[i];
+            const filePath = thumbnail.startsWith("/") ? thumbnail : `/${thumbnail}`;
+            this.imageData.push(`${this.props.imagePath}${filePath}`);
         }
 
         this.preloadImages();

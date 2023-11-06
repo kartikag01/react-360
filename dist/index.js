@@ -385,8 +385,9 @@ var React360Viewer = /*#__PURE__*/function (_Component) {
     key: "fetchData",
     value: function fetchData() {
       for (var i = 0; i < this.props.thumbnails.length; i++) {
-        var filePath = getRelativeImagePath("".concat(this.props.imagePath).concat(this.props.thumbnails[i]));
-        this.imageData.push(filePath);
+        var thumbnail = this.props.thumbnails[i];
+        var filePath = thumbnail.startsWith("/") ? thumbnail : "/".concat(thumbnail);
+        this.imageData.push("".concat(this.props.imagePath).concat(filePath));
       }
 
       this.preloadImages();
