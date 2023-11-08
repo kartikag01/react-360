@@ -10,7 +10,7 @@ export default {
       {
         file: pkg.main,
         exports: 'named',
-        format: 'esm',
+        format: 'cjs',
         strict: false
       }
     ],

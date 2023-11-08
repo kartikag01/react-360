@@ -1,5 +1,10 @@
-import React, { Component } from 'react';
-import Hammer from 'react-hammerjs';
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = require('react');
+var React__default = _interopDefault(React);
+var Hammer = _interopDefault(require('react-hammerjs'));
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -118,10 +123,10 @@ function _createSuper(Derived) {
 }
 
 var button = function button(props) {
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React__default.createElement("div", {
     className: "v360-menu-btns",
     onClick: props.clicked
-  }, /*#__PURE__*/React.createElement("i", {
+  }, /*#__PURE__*/React__default.createElement("i", {
     className: props.icon
   }), props.text);
 };
@@ -318,8 +323,8 @@ var React360Viewer = /*#__PURE__*/function (_Component) {
       _this.currentScale = 1;
     });
 
-    _this.viewPercentageRef = /*#__PURE__*/React.createRef();
-    _this.viewPortElementRef = /*#__PURE__*/React.createRef();
+    _this.viewPercentageRef = /*#__PURE__*/React__default.createRef();
+    _this.viewPortElementRef = /*#__PURE__*/React__default.createRef();
     _this.canvas = null;
     _this.ctx = null;
     _this.isMobile = false;
@@ -880,7 +885,7 @@ var React360Viewer = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this5 = this;
 
-      return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement("div", {
         className: "v360-viewer-container",
         ref: function ref(inputEl) {
           _this5.viewerContainerRef = inputEl;
@@ -889,14 +894,14 @@ var React360Viewer = /*#__PURE__*/function (_Component) {
         onWheel: function onWheel(e) {
           return _this5.zoomImage(e);
         }
-      }, !this.state.imagesLoaded ? /*#__PURE__*/React.createElement("div", {
+      }, !this.state.imagesLoaded ? /*#__PURE__*/React__default.createElement("div", {
         className: "v360-viewport"
-      }, /*#__PURE__*/React.createElement("div", {
+      }, /*#__PURE__*/React__default.createElement("div", {
         className: "v360-spinner-grow"
-      }), /*#__PURE__*/React.createElement("p", {
+      }), /*#__PURE__*/React__default.createElement("p", {
         ref: this.viewPercentageRef,
         className: "v360-percentage-text"
-      })) : '', /*#__PURE__*/React.createElement(Hammer, {
+      })) : '', /*#__PURE__*/React__default.createElement(Hammer, {
         onPinchIn: this.handlePinch,
         onPinchOut: this.handlePinch,
         onPinchEnd: this.pinchOut,
@@ -907,51 +912,51 @@ var React360Viewer = /*#__PURE__*/function (_Component) {
             }
           }
         }
-      }, /*#__PURE__*/React.createElement("div", {
+      }, /*#__PURE__*/React__default.createElement("div", {
         className: "v360-viewport-container v360-viewport"
-      }, /*#__PURE__*/React.createElement("canvas", {
+      }, /*#__PURE__*/React__default.createElement("canvas", {
         className: "v360-image-container",
         ref: function ref(inputEl) {
           _this5.imageContainerRef = inputEl;
         }
-      }), this.props.boxShadow ? /*#__PURE__*/React.createElement("div", {
+      }), this.props.boxShadow ? /*#__PURE__*/React__default.createElement("div", {
         className: "v360-product-box-shadow"
-      }) : '')), /*#__PURE__*/React.createElement("abbr", {
+      }) : '')), /*#__PURE__*/React__default.createElement("abbr", {
         title: "Fullscreen Toggle"
-      }, /*#__PURE__*/React.createElement("div", {
+      }, /*#__PURE__*/React__default.createElement("div", {
         className: "v360-fullscreen-toggle text-center",
         onClick: this.toggleFullScreen
-      }, /*#__PURE__*/React.createElement("div", {
+      }, /*#__PURE__*/React__default.createElement("div", {
         className: this.props.buttonClass === 'dark' ? 'v360-fullscreen-toggle-btn text-light' : 'v360-fullscreen-toggle-btn text-dark'
-      }, /*#__PURE__*/React.createElement("i", {
+      }, /*#__PURE__*/React__default.createElement("i", {
         className: !this.state.isFullScreen ? 'fas fa-expand text-lg' : 'fas fa-compress text-lg'
-      })))), /*#__PURE__*/React.createElement("div", {
+      })))), /*#__PURE__*/React__default.createElement("div", {
         id: "v360-menu-btns",
         className: this.props.buttonClass
-      }, /*#__PURE__*/React.createElement("div", {
+      }, /*#__PURE__*/React__default.createElement("div", {
         className: "v360-navigate-btns"
-      }, /*#__PURE__*/React.createElement(button, {
+      }, /*#__PURE__*/React__default.createElement(button, {
         clicked: this.togglePlay,
         icon: this.state.playing ? 'fa fa-pause' : 'fa fa-play'
-      }), /*#__PURE__*/React.createElement(button, {
+      }), /*#__PURE__*/React__default.createElement(button, {
         clicked: this.zoomIn,
         icon: "fa fa-search-plus"
-      }), /*#__PURE__*/React.createElement(button, {
+      }), /*#__PURE__*/React__default.createElement(button, {
         clicked: this.zoomOut,
         icon: "fa fa-search-minus"
-      }), this.state.panmode ? /*#__PURE__*/React.createElement(button, {
+      }), this.state.panmode ? /*#__PURE__*/React__default.createElement(button, {
         clicked: this.togglePanMode,
         text: "360\xB0"
-      }) : /*#__PURE__*/React.createElement(button, {
+      }) : /*#__PURE__*/React__default.createElement(button, {
         clicked: this.togglePanMode,
         icon: "fa fa-hand-paper"
-      }), /*#__PURE__*/React.createElement(button, {
+      }), /*#__PURE__*/React__default.createElement(button, {
         clicked: this.prev,
         icon: "fa fa-chevron-left"
-      }), /*#__PURE__*/React.createElement(button, {
+      }), /*#__PURE__*/React__default.createElement(button, {
         clicked: this.next,
         icon: "fa fa-chevron-right"
-      }), /*#__PURE__*/React.createElement(button, {
+      }), /*#__PURE__*/React__default.createElement(button, {
         clicked: this.resetPosition,
         icon: "fa fa-sync"
       })))));
@@ -959,6 +964,6 @@ var React360Viewer = /*#__PURE__*/function (_Component) {
   }]);
 
   return React360Viewer;
-}(Component);
+}(React.Component);
 
-export default React360Viewer;
+exports.default = React360Viewer;
